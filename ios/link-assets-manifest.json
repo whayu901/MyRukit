@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Lekton-Bold.ttf",
+      "sha1": "55ccea4eccda24ee9ff951b48a29bbe7ed704b7b"
+    },
+    {
+      "path": "assets/fonts/Lekton-Italic.ttf",
+      "sha1": "b0c88171ce33020372d50f5a858e18536dea5314"
+    },
+    {
+      "path": "assets/fonts/Lekton-Regular.ttf",
+      "sha1": "6d2a02fa8107d4f98238282cc4b3b411f9994da9"
+    }
+  ]
+}
