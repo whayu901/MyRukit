@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export type Item = {
   id: number;
   name: string | null;
@@ -17,6 +18,16 @@ export type Item = {
   url: string;
   created: string;
   episode: Array<any>;
+};
+
+export type ItemEpisode = {
+  id?: number;
+  name?: string | undefined;
+  air_date?: string;
+  episode?: string;
+  characters?: any[];
+  url?: string;
+  created?: string;
 };
 
 export type ListResponse = {

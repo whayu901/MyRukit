@@ -16,8 +16,9 @@ export const request = async ({
     statusDescription: "",
   };
 
-  const reqUrl =
-    "https://rickandmortyapi.com/api/" + endpoint + `${id ? "/" + id : ""}`;
+  const reqUrl = baseUrl
+    ? baseUrl
+    : "https://rickandmortyapi.com/api/" + endpoint + `${id ? "/" + id : ""}`;
 
   try {
     const res: AxiosResponse = await axios({

@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Item } from "@actions/request/types";
-import { getDetailRickAndMorty } from "@actions/request/rickAndMorty";
+import { Item, ItemEpisode } from "@actions/request/types";
+import {
+  getDetailRickAndMorty,
+  getEpisodRickAndMorty,
+} from "@actions/request/rickAndMorty";
 
 export const useDetail = ({ navigation, route }) => {
   const { params } = route;
@@ -8,6 +11,7 @@ export const useDetail = ({ navigation, route }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [title] = useState<string>(params?.name);
   const [dataDetail, setDataDetail] = useState<Item>();
+  const [dataDetailEpisode, setDataDetailEpisode] = useState<ItemEpisode>();
 
   useEffect(() => {
     _getDetailRickAndMorty();

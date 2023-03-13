@@ -1,5 +1,6 @@
 export type PayloadWithCallback<ResponseData = any, StartPayload = any> = {
   id?: number;
+  url?: string;
   onStart?: (data?: StartPayload) => void;
   onSuccess: (data?: ResponseData) => void;
   onFinish?: () => void;

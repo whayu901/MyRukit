@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, FlatList } from "react-native";
 import { Layout, Header } from "@component-moleculs";
 
 import { useDetail } from "./logic/useDetail";
-import { DetailSpesification } from "./component";
+import { DetailSpesification, ItemDetail } from "./component";
 import styles from "./styles";
 
 const DetailPage = ({ navigation, route }) => {
@@ -11,6 +11,10 @@ const DetailPage = ({ navigation, route }) => {
     navigation,
     route,
   });
+
+  const _renderItem = ({ item, index }: { item: any; index: number }) => {
+    return <ItemDetail item={item} indexItem={index} />;
+  };
 
   return (
     <Layout statusBarStyle="light-content">
@@ -39,6 +43,12 @@ const DetailPage = ({ navigation, route }) => {
 
           <View>
             <Text style={styles.nameText}>Episode</Text>
+
+            <FlatList
+              data={dataDetail?.episode}
+              renderItem={_renderItem}
+              scrollEnabled={false}
+            />
           </View>
         </View>
       </ScrollView>

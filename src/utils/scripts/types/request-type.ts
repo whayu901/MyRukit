@@ -2,7 +2,7 @@ import { Method } from "axios";
 
 export type TBaseRequest = {
   baseUrl?: string;
-  endpoint: string;
+  endpoint?: string;
   method: Method;
   timeout?: number;
   needInformationTimeout?: boolean;
