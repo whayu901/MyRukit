@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ItemRickAndMorty rendering should match to snapshot ItemRickAndMorty: ItemRickAndMorty snapshot true 1`] = `
+Object {
+  "temRickAndMorty": <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "opacity": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "none",
+          }
+        }
+        style={
+          Object {
+            "height": 40,
+            "width": 40,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000000",
+            "fontFamily": "Lekton-Bold",
+            "fontSize": 16,
+          }
+        }
+      >
+        wahyu
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#000000",
+            "fontFamily": "Lekton-Regular",
+            "fontSize": 12,
+            "paddingTop": 8,
+          }
+        }
+      >
+        human
+      </Text>
+    </View>
+  </View>,
+}
+`;

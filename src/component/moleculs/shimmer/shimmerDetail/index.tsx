@@ -1,10 +1,7 @@
-import React, { memo, FC } from "react";
-import { View, Dimensions } from "react-native";
-import SkeletonPlaceholder from "react-native-skeleton-placeholder";
+import React, { memo } from "react";
+import { View } from "react-native";
 
 const ShimmerDetail = () => {
-  const { height } = Dimensions.get("window");
-
   return (
     <>
       <View

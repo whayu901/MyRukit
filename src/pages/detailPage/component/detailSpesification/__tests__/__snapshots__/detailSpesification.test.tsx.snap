@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test detail spesification rendering should match to snapshot: Text DetailSpesification snapshot true 1`] = `
+Object {
+  "detailSpesification": <View
+    style={
+      Object {
+        "backgroundColor": "#EF5DA8",
+        "borderRadius": 10,
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginVertical": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Bold",
+            "fontSize": 14,
+          }
+        }
+      >
+        spesies:
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Regular",
+            "fontSize": 14,
+            "marginLeft": 10,
+          }
+        }
+      >
+        test1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginVertical": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Bold",
+            "fontSize": 14,
+          }
+        }
+      >
+        gender:
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Regular",
+            "fontSize": 14,
+            "marginLeft": 10,
+          }
+        }
+      >
+        laki-laki
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginVertical": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Bold",
+            "fontSize": 14,
+          }
+        }
+      >
+        status:
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Lekton-Regular",
+            "fontSize": 14,
+            "marginLeft": 10,
+          }
+        }
+      >
+        alive
+      </Text>
+    </View>
+  </View>,
+}
+`;

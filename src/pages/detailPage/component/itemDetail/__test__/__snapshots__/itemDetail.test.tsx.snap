@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test itemDetail rendering should match to snapshot - Text Transaction: itemDetail snapshot true 1`] = `
+Object {
+  "itemDetail": <View
+    style={
+      Object {
+        "marginVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "Lekton-Bold",
+          "fontSize": 16,
+        }
+      }
+    >
+      undefined - undefined
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontFamily": "Lekton-Regular",
+          "fontSize": 12,
+          "marginTop": 8,
+        }
+      }
+    >
+      August 20, 2017
+    </Text>
+  </View>,
+}
+`;
