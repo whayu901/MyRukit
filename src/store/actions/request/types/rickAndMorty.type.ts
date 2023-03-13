@@ -20,5 +20,5 @@ export type Item = {
 
 export type ListResponse = {
   info: any;
-  results: Array<Item>;
+  results: any[];
 };

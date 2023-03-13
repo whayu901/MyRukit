@@ -16,7 +16,6 @@ export const getRickAndMortyList = ({
     endpoint: "character",
   })
     .then((res) => {
-      console.log({ res });
       onSuccess(res);
     })
     .catch((e) => onError?.(e))
