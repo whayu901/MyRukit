@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Animated } from "react-native";
 import { ItemEpisode } from "@actions/request/types";
 import { getEpisodRickAndMorty } from "@actions/request/rickAndMorty";
 

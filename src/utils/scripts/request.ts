@@ -8,6 +8,7 @@ export const request = async ({
   method,
   timeout = 15000,
   id,
+  params,
 }: TBaseRequest) => {
   const result: ResultType = {
     status: "loading",
@@ -25,6 +26,7 @@ export const request = async ({
       url: reqUrl,
       method,
       timeout: timeout,
+      params: params,
     });
 
     const resultSuccess: ResultType = {

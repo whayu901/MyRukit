@@ -9,11 +9,15 @@ export const getRickAndMortyList = ({
   onFinish,
   onSuccess,
   onError,
+  page,
 }: PayloadWithCallback<ListResponse>) => {
   onStart();
   request({
     method: "GET",
     endpoint: "character",
+    params: {
+      page,
+    },
   })
     .then((res) => {
       onSuccess(res);

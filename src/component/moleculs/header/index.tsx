@@ -1,11 +1,5 @@
 import React, { memo, FC } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { COLORS } from "@themes";
 

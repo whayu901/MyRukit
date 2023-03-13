@@ -1,9 +1,14 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Animated } from "react-native";
 import { Item, ItemEpisode } from "@actions/request/types";
 import {
   getDetailRickAndMorty,
   getEpisodRickAndMorty,
 } from "@actions/request/rickAndMorty";
+
+const HEADER_MAX_HEIGHT = 200;
+const HEADER_MIN_HEIGHT = 60;
+const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export const useDetail = ({ navigation, route }) => {
   const { params } = route;
@@ -11,12 +16,30 @@ export const useDetail = ({ navigation, route }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [title] = useState<string>(params?.name);
   const [dataDetail, setDataDetail] = useState<Item>();
-  const [dataDetailEpisode, setDataDetailEpisode] = useState<ItemEpisode>();
+  const [scrollY, setScrollY] = useState(new Animated.Value(0));
+
+  const headerHeight = scrollY.interpolate({
+    inputRange: [0, HEADER_SCROLL_DISTANCE],
+    outputRange: [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
+    extrapolate: "clamp",
+  });
+
+  const headerOpacity = scrollY.interpolate({
+    inputRange: [0, HEADER_SCROLL_DISTANCE / 2, HEADER_SCROLL_DISTANCE],
+    outputRange: [1, 1, 0],
+    extrapolate: "clamp",
+  });
 
   useEffect(() => {
     _getDetailRickAndMorty();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const _onScroll = () => {
+    Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], {
+      useNativeDriver: false,
+    });
+  };
 
   const _getDetailRickAndMorty = useCallback(() => {
     getDetailRickAndMorty({
@@ -42,5 +65,8 @@ export const useDetail = ({ navigation, route }) => {
     loading,
     title,
     _goBackNavigate,
+    headerHeight,
+    headerOpacity,
+    _onScroll,
   };
 };

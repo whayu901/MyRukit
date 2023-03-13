@@ -9,6 +9,7 @@ export type TBaseRequest = {
   withFormData?: boolean;
   withoutToken?: boolean;
   id?: number;
+  params?: object;
 };
 
 export type ResultType<D = any> = {
