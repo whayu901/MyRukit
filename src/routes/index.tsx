@@ -9,8 +9,16 @@ const Stack = createNativeStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator initialRouteName="HomePage">
-      <Stack.Screen name="HomePage" component={HomePage} />
-      <Stack.Screen name="DetailPage" component={DetailPage} />
+      <Stack.Screen
+        name="HomePage"
+        component={HomePage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DetailPage"
+        component={DetailPage}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };

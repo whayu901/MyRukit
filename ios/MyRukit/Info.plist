@@ -53,12 +53,6 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Lekton-Bold.ttf</string>
-		<string>Lekton-Italic.ttf</string>
-		<string>Lekton-Regular.ttf</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
@@ -75,6 +69,9 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 		<string>Fontisto.ttf</string>
+		<string>Lekton-Italic.ttf</string>
+		<string>Lekton-Regular.ttf</string>
+		<string>Lekton-Bold.ttf</string>
 	</array>
 </dict>
 </plist>

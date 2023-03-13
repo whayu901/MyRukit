@@ -1,9 +1,10 @@
 export type Item = {
   id: number;
   name: string | null;
-  species?: string | null;
+  species?: string | undefined;
+  status: string | undefined;
   type: string;
-  gender: string;
+  gender: string | undefined;
   origin: {
     name: string;
     url: string;

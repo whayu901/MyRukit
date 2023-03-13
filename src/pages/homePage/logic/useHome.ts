@@ -1,17 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import {
-  RouteProp,
-  useNavigation,
-  useRoute,
-  useTheme,
-} from "@react-navigation/native";
-import { ListResponse } from "@actions/request/types";
+import { Item } from "@actions/request/types";
 import { getRickAndMortyList } from "@actions/request/rickAndMorty";
 
 export const useHome = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [loadingFirstTime, setloadingFirstTime] = useState<boolean>(true);
-  const [dataList, setDataList] = useState<Array<ListResponse>>([]);
+  const [dataList, setDataList] = useState<Array<Item>>([]);
 
   const isAll = useRef(false);
 

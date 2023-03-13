@@ -35,8 +35,8 @@ export const getDetailRickAndMorty = ({
     endpoint: "character",
     id,
   })
-    .then((res: ResultType<Item>) => {
-      onSuccess(res.data);
+    .then((res) => {
+      onSuccess(res);
     })
     .catch((e) => onError?.(e))
     .finally(() => onFinish?.());

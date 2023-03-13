@@ -44,7 +44,8 @@
       "react": ["./node_modules/@types/react"],
       "@themes": ["./src/themes/index"],
       "@store": ["./src/store/store"],
-      "@actions/*": ["./src/store/actions/*"]
+      "@actions/*": ["./src/store/actions/*"],
+      "@component-moleculs": ["./src/component/moleculs"]
     }
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],

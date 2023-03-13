@@ -11,6 +11,7 @@ module.exports = {
           "@themes": "./src/themes/index",
           "@store": ["./src/store/store"],
           "@actions": "./src/store/actions/",
+          "@component-moleculs": "./src/component/moleculs",
         },
       },
     ],
