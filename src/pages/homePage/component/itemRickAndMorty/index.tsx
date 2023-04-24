@@ -20,7 +20,8 @@ const ItemRickAndMorty: React.FC<ItemProps> = ({
       key={indexItem}
       activeOpacity={1}
       onPress={onPress}
-      style={styles.containerItem}>
+      style={styles.containerItem}
+    >
       <View>
         <Image
           source={{ uri: item.image }}
