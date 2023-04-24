@@ -2,6 +2,12 @@
 
 [![Code Quality](https://github.com/whayu901/MyRukit/actions/workflows/code-quality.yml/badge.svg)](https://github.com/whayu901/MyRukit/actions/workflows/code-quality.yml)
 
+## Code Quality
+
+| Statements                                                                               | Branches                                                                             | Functions                                                                              | Lines                                                                          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat) |
+
 # RUKITA TEST MOBILE ENGINEER
 
 i have finished for test mobile engineer that i should create app using Rick and Morty API. At below i will attach several proof image for this test.
