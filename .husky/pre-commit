@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn run format-code && yarn run check-format && yarn run make-badges
+yarn run format-code && yarn run check-format &&  yarn run make-badges
