@@ -16,9 +16,8 @@ const ItemDetail: React.FC<ItemDetailProps> = ({ item, indexItem }) => {
   return (
     <View style={styles.containerEpisode}>
       <Text
-        style={
-          styles.titleEpisodeText
-        }>{`${dataDetailEpisode?.name} - ${dataDetailEpisode?.episode}`}</Text>
+        style={styles.titleEpisodeText}
+      >{`${dataDetailEpisode?.name} - ${dataDetailEpisode?.episode}`}</Text>
       <Text style={styles.dateTitleText}>
         {moment(dataDetailEpisode?.created).format("MMMM D, YYYY")}
       </Text>
