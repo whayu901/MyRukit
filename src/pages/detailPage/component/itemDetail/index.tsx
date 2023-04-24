@@ -7,7 +7,7 @@ import styles from "./styles";
 
 interface ItemDetailProps {
   item: any;
-  indexItem: number;
+  indexItem?: number;
 }
 
 const ItemDetail: React.FC<ItemDetailProps> = ({ item, indexItem }) => {
