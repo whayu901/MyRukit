@@ -1,5 +1,7 @@
 [![Logo Optimus](https://www.rukita.co/static/img/rukita-d.svg)](https://rukita.co)
 
+[![Code Quality](https://github.com/whayu901/MyRukit/actions/workflows/code-quality.yml/badge.svg)](https://github.com/whayu901/MyRukit/actions/workflows/code-quality.yml)
+
 # RUKITA TEST MOBILE ENGINEER
 
 i have finished for test mobile engineer that i should create app using Rick and Morty API. At below i will attach several proof image for this test.
