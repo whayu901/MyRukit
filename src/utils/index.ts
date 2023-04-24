@@ -1,4 +1,4 @@
-import { Platform, Dimensions } from "react-native";
+import { Platform } from "react-native";
 
 import { isIphoneX } from "./notchDetect";
 

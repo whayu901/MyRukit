@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 export type Item = {
   id: number;
   name: string | null;

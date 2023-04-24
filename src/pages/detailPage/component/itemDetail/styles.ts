@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { TYPHOGRAPHY, COLORS } from "@themes";
+import { TYPHOGRAPHY } from "@themes";
 
 const styles = StyleSheet.create({
   containerEpisode: {

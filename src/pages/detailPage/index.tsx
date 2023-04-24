@@ -14,15 +14,7 @@ import { DetailSpesification, ItemDetail } from "./component";
 import styles from "./styles";
 
 const DetailPage = ({ navigation, route }) => {
-  const {
-    dataDetail,
-    loading,
-    title,
-    _goBackNavigate,
-    headerOpacity,
-    headerHeight,
-    _onScroll,
-  } = useDetail({
+  const { dataDetail, loading, title, _goBackNavigate, _onScroll } = useDetail({
     navigation,
     route,
   });

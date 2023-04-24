@@ -12,8 +12,7 @@ import styles from "./styles";
 const HomePage: React.FC = () => {
   const { navigate }: any = useNavigation();
 
-  const { dataList, loading, loadingFirstTime, _loadMoreList, _getListData } =
-    useHome();
+  const { dataList, loading, loadingFirstTime, _loadMoreList } = useHome();
 
   const _renderItem = ({ item, index }: { item: Item; index: number }) => {
     return (

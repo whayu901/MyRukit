@@ -1,4 +1,4 @@
-import React, { memo, FC } from "react";
+import React, { memo } from "react";
 import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 
 const ShimmerList = () => {

@@ -1,6 +1,5 @@
 import { PayloadWithCallback } from "src/store";
 import { request } from "src/utils/scripts/request";
-import { ResultType } from "src/utils/scripts/types/request-type";
 
 import { ListResponse, Item, ItemEpisode } from "./types";
 

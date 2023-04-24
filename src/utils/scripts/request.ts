@@ -1,6 +1,6 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
+import axios, { AxiosResponse } from "axios";
 
-import { TBaseRequest, ResultType } from "./types/request-type";
+import { TBaseRequest } from "./types/request-type";
 
 export const request = async ({
   baseUrl,
@@ -10,13 +10,6 @@ export const request = async ({
   id,
   params,
 }: TBaseRequest) => {
-  const result: ResultType = {
-    status: "loading",
-    statusCode: "",
-    data: "",
-    statusDescription: "",
-  };
-
   const reqUrl = baseUrl
     ? baseUrl
     : "https://rickandmortyapi.com/api/" + endpoint + `${id ? "/" + id : ""}`;
@@ -29,24 +22,9 @@ export const request = async ({
       params: params,
     });
 
-    const resultSuccess: ResultType = {
-      status: "success",
-      statusCode: `${res.data?.statusCode}`,
-      data: `${res.data?.data}`,
-      statusDescription: `${res.data?.statusDescription}`,
-    };
-
     return res?.data || {};
-  } catch (error: AxiosError | any) {
-    const { code, message, response } = error;
-    const resError: AxiosResponse<any> | any = response;
-
-    const resultError: ResultType = {
-      status: "error",
-      statusCode: `${resError?.data?.statusCode}`,
-      data: `${resError?.data?.data}`,
-      statusDescription: `${resError?.data?.statusDescription}`,
-    };
+  } catch (error: any) {
+    const { code, message } = error;
 
     if (message === "Network Error" || code === "ECONNABORTED") {
       return { statusDescription: "Please Check Your Connection!" };

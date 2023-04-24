@@ -32,4 +32,4 @@ const DetailSpesification: React.FC<SpesificationProps> = ({
   );
 };
 
-export default DetailSpesification;
+export default memo(DetailSpesification);

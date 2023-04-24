@@ -10,14 +10,15 @@ interface ItemDetailProps {
   indexItem?: number;
 }
 
-const ItemDetail: React.FC<ItemDetailProps> = ({ item, indexItem }) => {
+const ItemDetail: React.FC<ItemDetailProps> = ({ item }) => {
   const { dataDetailEpisode } = useItemDetail({ item });
 
   return (
     <View style={styles.containerEpisode}>
       <Text
-        style={styles.titleEpisodeText}
-      >{`${dataDetailEpisode?.name} - ${dataDetailEpisode?.episode}`}</Text>
+        style={
+          styles.titleEpisodeText
+        }>{`${dataDetailEpisode?.name} - ${dataDetailEpisode?.episode}`}</Text>
       <Text style={styles.dateTitleText}>
         {moment(dataDetailEpisode?.created).format("MMMM D, YYYY")}
       </Text>

@@ -1,10 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Animated } from "react-native";
-import { Item, ItemEpisode } from "@actions/request/types";
-import {
-  getDetailRickAndMorty,
-  getEpisodRickAndMorty,
-} from "@actions/request/rickAndMorty";
+import { Item } from "@actions/request/types";
+import { getDetailRickAndMorty } from "@actions/request/rickAndMorty";
 
 const HEADER_MAX_HEIGHT = 200;
 const HEADER_MIN_HEIGHT = 60;
@@ -16,7 +13,7 @@ export const useDetail = ({ navigation, route }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [title] = useState<string>(params?.name);
   const [dataDetail, setDataDetail] = useState<Item>();
-  const [scrollY, setScrollY] = useState(new Animated.Value(0));
+  const [scrollY] = useState(new Animated.Value(0));
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, HEADER_SCROLL_DISTANCE],
