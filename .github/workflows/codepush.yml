@@ -1,0 +1,67 @@
+name: Codepush
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      is-binary:
+        required: true
+        type: string
+      deployment:
+        type: string
+
+jobs:
+  codepush:
+    strategy:
+      matrix:
+        platform: [android, ios]
+    name: Codepush ${{ matrix.platform }} ${{ inputs.environment }}
+    runs-on: ubuntu-20.04
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: init
+        run: |
+          echo "ENVIRONMENT ${{ inputs.environment }}"
+
+      - uses: tonynguyenit18/github-action-custom-vars@v1
+        with:
+          fetch-depth: 1
+
+      - name: Yarn cache
+        uses: actions/cache@v3
+        id: node_cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}
+
+      - name: Install node_modules
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: yarn install --frozen-lockfile
+        if: steps.node_cache.outputs.cache-hit != 'true'
+
+      - name: Patch package
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: yarn patch-package
+
+      - name: Create Beta CodePush Release
+        env:
+          APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
+          APPCENTER_PROJECT_NAME_ANDROID: ${{ secrets.APPCENTER_PROJECT_NAME_ANDROID }}
+          APPCENTER_PROJECT_NAME_IOS: ${{ secrets.APPCENTER_PROJECT_NAME_IOS }}
+          DESCRIPTION: Made by - ${{ github.actor }} \n sha - ${{ github.sha }}
+          DEPLOYMENT_NAME: ${{ inputs.deployment || github.event.head_commit.message }}
+          NODE_ENV: production
+          IS_BINARY: ${{ inputs.is-binary }}
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+          TIMESTAMP: ${{ github.event.head_commit.timestamp }}
+          SHA: ${{ github.sha }}
+          ACTOR: ${{ github.actor }}
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          npm install -g appcenter-cli@2.12.0
+          ./scripts/codepush.sh
